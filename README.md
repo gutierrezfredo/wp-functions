@@ -2,6 +2,8 @@
 
 This is a list of useful WordPress functions that I often reference to enhance or clean up my sites. Please be careful and make backups.
 
+Author: https://github.com/taniarascia
+
 - [Hide WordPress Update Nag to All But Admins](#hide-wordpress-update-nag-to-all-but-admins)
 - [Utilize Proper WordPress Titles](#utilize-proper-wordpress-titles)
 - [Create Custom WordPress Dashboard Widget](#create-custom-wordpress-dashboard-widget)
