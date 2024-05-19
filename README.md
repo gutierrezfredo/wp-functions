@@ -50,6 +50,19 @@ Author: https://github.com/taniarascia
 - [Exclude a Category From WordPress Loops](#exclude-a-category-from-wordpress-loops)
 - [Disable the message "JQMIGRATE: Migrate is installed, version 1.4.1"](#user-content-disable-the-message---jqmigrate-migrate-is-installed-version-141)
 - [Load heavy 3rd-party scripts later for better performance](#load-heavy-3rd-party-scripts-later-for-better-performance)
+- [Adds not-home class to body](#adds-not-home-class-to-body)
+- [Use Relevanssi search instead of the default](#use-relevanssi-search-instead-of-the-default)
+- [Solves HTTP ERROR when uploading media](#solves-http-error-when-uploading-media)
+- [Hides empty categories in products category widget](#hides-empty-categories-in-products-category-widget)
+- [Adds post category to the body-class](#adds-post-category-to-the-body-class)
+- [Changes the text in Thank you page after checkout on Woocommerce](#changes-the-text-in-Thank-you-page-after-checkout-on-woocommerce)
+- [Points the event link to the event website URL in The Events Calendar plugin](#points-the-event-link-to-the-event-website-URL-in-The-Events-Calendar-plugin)
+- [Activates Header extra widget area](#activates-header-extra-widget-area-in-enfold)
+- [Disables portfolio items on Enfold](#disables-portfolio-items-in-enfold)
+- [Adds custom post type to avia builder in Enfold](#Adds-custom-post-type-to-avia-builder-in-enfold)
+- [Activates Advanced Layout Builder on Custom Post types in Enfold](#activates-advanced-layout-builder-on-custom-post-types-in-enfold)
+- [Hides web field from comment form](#hides-web-field-from-comment-form)
+- [Fixes buggy view in events tribe plugin list admin table](#fixes-buggy-view-in-events-tribe-plugin-list-admin-table)
 
 ## Hide WordPress Update Nag to All But Admins
 
@@ -1044,7 +1057,7 @@ add_filter('body_class','add_not_home_body_class');
 ```
 
 
-# Use Relevanssi in search instead of the default search
+# Use Relevanssi search instead of the default
 ## Relevanssi search plugin needs to be installed
 
 ```php
@@ -1098,7 +1111,7 @@ function woo_hide_product_categories_widget( $list_args )
 add_filter( 'woocommerce_product_categories_widget_args', 'woo_hide_product_categories_widget' );
 ```
 
-# Adds post category to the the body_class
+# Adds post category to the body-class
 ```php
 /**
  * Adds post category to the the body_class
@@ -1112,7 +1125,7 @@ function category_id_class($classes) {
 add_filter('body_class', 'category_id_class');
 ```
 
-# Changes the text in Thank you page after checkout (Woocommerce)
+# Changes the text in Thank you page after checkout on Woocommerce
 ```php
 /**
  * Changes the text in Thank you page after checkout (Woocommerce)
@@ -1124,7 +1137,7 @@ function avia_thank_you() {
 }
 ```
 
-# Changes the event link to the event website URL if that is set (The Events Calendar plugin)
+# Points the event link to the event website URL in The Events Calendar plugin
 ## Simply Comment out the add_filter() line to disable this function.
 ```php
 /**
@@ -1137,7 +1150,7 @@ function avia_thank_you() {
 }
 ```
 
-# Activates Header extra widget area (Enfold)
+# Activates header extra widget area in Enfold
 ```php
 /**
  * Activates Header extra widget area (Enfold theme)
@@ -1148,7 +1161,7 @@ function enfold_customization_header_widget_area() {
 }
 ```
 
-# Disables portfolio items (Enfold)
+# Disables portfolio items in Enfold
 ```php
 /**
  * Disables portfolio items (Enfold theme)
@@ -1159,7 +1172,7 @@ function remove_portfolio() {
 }
 ```
 
-# Adds custom post type to avia builder (Custom Post Types plugin & Enfold theme)
+# Adds custom post type to avia builder in Enfold
 ```php
 /**
  * Adds custom post type to avia builder (Custom Post Types plugin & Enfold theme)
@@ -1168,7 +1181,7 @@ add_theme_support('add_avia_builder_post_type_option');
 add_theme_support('avia_template_builder_custom_post_type_grid');
 ```
 
-# Activates Advanced Layout Builder on Custom Post types (Custom Post Types plugin & Enfold theme)
+# Activates Advanced Layout Builder on Custom Post types in Enfold
 ```php
 /**
  * Activates Advanced Layout Builder on Custom Post types (Custom Post Types plugin & Enfold theme)
